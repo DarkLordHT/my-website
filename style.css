@@ -21,7 +21,7 @@
   /* 笔记区域 */
   #note-area { width:100%; height:120px; margin-top:12px; }
   
-  /* 学生卡片示例样式（可自由扩展） */
+  /* 学生卡片 */
   .student-card {
     display: flex;
     justify-content: space-between;
