@@ -1,59 +1,20 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <title>我的网站</title>
-  <style>
-    body {
-      margin: 0;
-      font-family: sans-serif;
-      display: flex;
-    }
-
-    .sidebar {
-      width: 200px;
-      background-color: #333;
-      color: white;
-      height: 100vh;
-      padding-top: 20px;
-    }
-
-    .sidebar a {
-      display: block;
-      color: white;
-      padding: 10px 20px;
-      text-decoration: none;
-    }
-
-    .sidebar a.sub {
-      padding-left: 40px;
-      font-size: 14px;
-    }
-
-    .sidebar a.sub-sub {
-      padding-left: 60px;
-      font-size: 13px;
-    }
-
-    .sidebar a:hover {
-      background-color: #575757;
-    }
-
-    .content {
-      flex-grow: 1;
-      padding: 20px;
-    }
-  </style>
+  <meta charset="UTF-8">
+  <title>Home</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="sidebar">
-    <a href="people.html">People</a>
-    <a href="school.html" class="sub">↳ School</a>
-    <a href="student.html" class="sub-sub">↳↳ Student</a>
-  </div>
+  <!-- 侧边栏占位容器，内容由 script.js 动态注入 -->
+  <div id="sidebar-container"></div>
+
+  <!-- 主内容 -->
   <div class="content">
-    <h1>欢迎来到首页</h1>
-    <p>请从左侧导航选择页面。</p>
+    <h1>Welcome</h1>
+    <p>这是主页。左侧导航栏在所有页面都会保持。</p>
   </div>
+
+  <script src="script.js"></script>
 </body>
 </html>
