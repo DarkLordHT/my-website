@@ -1,19 +1,31 @@
-<html lang="en">
+<!DOCTYPE html>
+<html>
 <head>
   <meta charset="UTF-8">
-  <title>Students</title>
+  <title>学生列表</title>
   <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
-  <div id="sidebar-container"></div>
-  <div class="content">
-    <div class="student-header">
-      <h1>Student 列表</h1>
-      <button id="add-student-btn"><i class="fa fa-plus"></i> 添加</button>
-    </div>
-    <div id="student-list"></div>
+  <div class="student-header">
+    <h1>Student 列表</h1>
+    <button id="add-student-btn">＋ 添加</button>
   </div>
+  <div id="student-list"></div>
+
+  <!-- Modal 表单 -->
+  <div class="modal" id="add-modal">
+    <div class="modal-content">
+      <h2>添加学生</h2>
+      <label>姓名</label><input id="name-input" type="text" />
+      <label>年龄</label><input id="age-input" type="number" />
+      <label>专业</label><input id="major-input" type="text" />
+      <label>照片</label><input id="photo-input" type="file" accept="image/*" />
+      <button id="save-student">保存</button>
+      <button id="cancel-add">取消</button>
+    </div>
+  </div>
+
+  <script src="config.js"></script>
   <script src="script.js"></script>
 </body>
 </html>
