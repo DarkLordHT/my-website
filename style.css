@@ -1,0 +1,46 @@
+/* style.css */
+body {
+    margin: 0;
+    font-family: sans-serif;
+    display: flex;
+  }
+  
+  /* --- 侧边栏 --- */
+  .sidebar {
+    width: 220px;
+    background: #333;
+    color: #fff;
+    height: 100vh;
+    overflow-y: auto;
+    padding-top: 20px;
+  }
+  
+  .sidebar ul {               /* 去掉默认圆点 */
+    list-style: none;
+    margin: 0;
+    padding-left: 0;
+  }
+  .sidebar li ul {            /* 子菜单默认隐藏 */
+    display: none;
+    padding-left: 20px;
+  }
+  .sidebar li.open > ul {     /* JS 加 .open 时显示 */
+    display: block;
+  }
+  .sidebar a {
+    display: block;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+  }
+  .sidebar a:hover,
+  .sidebar a.active {         /* 当前页面高亮 */
+    background: #575757;
+  }
+  
+  /* --- 主内容区 --- */
+  .content {
+    flex-grow: 1;
+    padding: 30px;
+  }
+  
