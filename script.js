@@ -5,9 +5,9 @@ document.addEventListener('DOMContentLoaded', () => {
         document.getElementById('sidebar-container').innerHTML = html;
   
         // 展开/折叠菜单
-        document.querySelectorAll('.sidebar li > a').forEach(link => {
+        document.querySelectorAll('.sidebar .menu-toggle').forEach(link => {
           const submenu = link.nextElementSibling;
-          if (!submenu) return;
+          if (!submenu || submenu.tagName !== 'UL') return;
   
           link.addEventListener('click', e => {
             e.preventDefault();
@@ -28,3 +28,4 @@ document.addEventListener('DOMContentLoaded', () => {
         }
       });
   });
+  
