@@ -28,6 +28,24 @@ body {
   .content { flex-grow: 1; padding: 30px; }
   
   /* ---- 学生卡片样式 ---- */
+  .student-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  #add-student-btn {
+    padding: 8px 16px;
+    background-color: #3498db;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    font-size: 14px;
+    cursor: pointer;
+  }
+  #add-student-btn:hover {
+    background-color: #2980b9;
+  }
   #student-list { display: flex; flex-direction: column; gap: 16px; }
   .student-card {
     display: flex;

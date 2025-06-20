@@ -1,4 +1,3 @@
-// 数据示例，可自行替换/扩展
 const studentsData = [
     {
       id: 1,
@@ -26,7 +25,6 @@ const studentsData = [
     }
   ];
   
-  // -------------- 公共：注入侧边栏 & 菜单逻辑 --------------
   function injectSidebar() {
     return fetch('nav.html')
       .then(res => res.text())
@@ -54,11 +52,10 @@ const studentsData = [
         }
       });
   }
-
-  // -------------- 学生列表渲染 --------------
-function renderStudentList() {
+  
+  function renderStudentList() {
     const listEl = document.getElementById('student-list');
-    if (!listEl) return; // 不在 student.html 时跳过
+    if (!listEl) return;
   
     studentsData.forEach((stu, idx) => {
       const card = document.createElement('div');
@@ -76,12 +73,18 @@ function renderStudentList() {
       });
       listEl.appendChild(card);
     });
+  
+    const addBtn = document.getElementById('add-student-btn');
+    if (addBtn) {
+      addBtn.addEventListener('click', () => {
+        alert('暂未实现添加功能，如需制作表单，请告知我可以继续帮助！');
+      });
+    }
   }
   
-  // -------------- 学生详情渲染 --------------
   function renderStudentDetail() {
     const detailWrapper = document.getElementById('student-detail');
-    if (!detailWrapper) return; // 不在详情页
+    if (!detailWrapper) return;
   
     const params = new URLSearchParams(location.search);
     const id = Number(params.get('id'));
@@ -104,7 +107,6 @@ function renderStudentList() {
     `;
   }
   
-  // -------------- 初始化 --------------
   document.addEventListener('DOMContentLoaded', () => {
     injectSidebar().then(() => {
       renderStudentList();
