@@ -44,3 +44,16 @@ body {
     padding: 30px;
   }
   
+  .sidebar .arrow {
+    display: inline-block;
+    width: 1em;
+    transition: transform 0.3s;
+    margin-right: 5px;
+    font-size: 12px;
+  }
+  
+  /* 展开状态时旋转箭头 ▼ */
+  .sidebar li.open > a .arrow {
+    transform: rotate(90deg); /* 从 ▶ 变成 ▼ */
+  }
+  

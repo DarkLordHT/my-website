@@ -8,5 +8,39 @@
 <body>
   <h1>Student 页面</h1>
   <p>这是 Student 页面。</p>
+  <h2>我的记事本</h2>
+<input type="text" id="noteInput" placeholder="写点什么..." />
+<button onclick="saveNote()">保存</button>
+
+<ul id="noteList"></ul>
+
+<script>
+  // 加载已有记录
+  function loadNotes() {
+    const list = JSON.parse(localStorage.getItem('mynotes')) || [];
+    const ul = document.getElementById('noteList');
+    ul.innerHTML = '';
+    list.forEach((note, index) => {
+      const li = document.createElement('li');
+      li.textContent = note;
+      ul.appendChild(li);
+    });
+  }
+
+  // 保存新记录
+  function saveNote() {
+    const input = document.getElementById('noteInput');
+    const text = input.value.trim();
+    if (!text) return;
+    const list = JSON.parse(localStorage.getItem('mynotes')) || [];
+    list.push(text);
+    localStorage.setItem('mynotes', JSON.stringify(list));
+    input.value = '';
+    loadNotes();
+  }
+
+  // 初始化加载
+  loadNotes();
+</script>
 </body>
 </html>
