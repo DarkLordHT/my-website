@@ -2,10 +2,53 @@
 <html lang="zh-CN">
 <head>
   <meta charset="UTF-8">
-  <title>我的个人网站</title>
+  <title>我的网站</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: sans-serif;
+      display: flex;
+    }
+
+    /* 左边侧边栏 */
+    .sidebar {
+      width: 200px;
+      background-color: #333;
+      color: white;
+      height: 100vh;
+      padding-top: 20px;
+    }
+
+    .sidebar a {
+      display: block;
+      color: white;
+      padding: 12px 20px;
+      text-decoration: none;
+    }
+
+    .sidebar a:hover {
+      background-color: #575757;
+    }
+
+    /* 右边内容区域 */
+    .content {
+      flex-grow: 1;
+      padding: 20px;
+    }
+  </style>
 </head>
 <body>
-  <h1>你好，世界！</h1>
-  <p>这是我用 GitHub 搭建的第一个网站。</p>
+
+  <div class="sidebar">
+    <a href="#">People</a>
+    <a href="#">School</a>
+    <a href="#">Student</a>
+  </div>
+
+  <div class="content">
+    <h1>欢迎来到我的网站</h1>
+    <p>这是主页内容，你可以点击左侧的分类进行浏览。</p>
+  </div>
+
 </body>
 </html>
