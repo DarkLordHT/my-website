@@ -1,11 +1,8 @@
-/* style.css */
 body {
     margin: 0;
     font-family: sans-serif;
     display: flex;
   }
-  
-  /* --- 侧边栏 --- */
   .sidebar {
     width: 220px;
     background: #333;
@@ -14,46 +11,40 @@ body {
     overflow-y: auto;
     padding-top: 20px;
   }
-  
-  .sidebar ul {               /* 去掉默认圆点 */
+  .sidebar ul {
     list-style: none;
     margin: 0;
     padding-left: 0;
   }
-  .sidebar li ul {            /* 子菜单默认隐藏 */
+  .sidebar li ul {
     display: none;
     padding-left: 20px;
   }
-  .sidebar li.open > ul {     /* JS 加 .open 时显示 */
+  .sidebar li.open > ul {
     display: block;
   }
   .sidebar a {
-    display: block;
+    display: flex;
+    align-items: center;
     color: #fff;
     padding: 10px 20px;
     text-decoration: none;
   }
   .sidebar a:hover,
-  .sidebar a.active {         /* 当前页面高亮 */
+  .sidebar a.active {
     background: #575757;
   }
-  
-  /* --- 主内容区 --- */
+  .sidebar .arrow {
+    display: inline-block;
+    width: 1em;
+    margin-right: 8px;
+    transition: transform 0.3s;
+    font-size: 12px;
+  }
+  .sidebar li.open > a .arrow {
+    transform: rotate(90deg);
+  }
   .content {
     flex-grow: 1;
     padding: 30px;
   }
-  
-  .sidebar .arrow {
-    display: inline-block;
-    width: 1em;
-    transition: transform 0.3s;
-    margin-right: 5px;
-    font-size: 12px;
-  }
-  
-  /* 展开状态时旋转箭头 ▼ */
-  .sidebar li.open > a .arrow {
-    transform: rotate(90deg); /* 从 ▶ 变成 ▼ */
-  }
-  
