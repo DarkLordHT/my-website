@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
   <title>我的网站</title>
   <style>
     body {
@@ -10,7 +10,6 @@
       display: flex;
     }
 
-    /* 左边侧边栏 */
     .sidebar {
       width: 200px;
       background-color: #333;
@@ -22,15 +21,24 @@
     .sidebar a {
       display: block;
       color: white;
-      padding: 12px 20px;
+      padding: 10px 20px;
       text-decoration: none;
+    }
+
+    .sidebar a.sub {
+      padding-left: 40px;
+      font-size: 14px;
+    }
+
+    .sidebar a.sub-sub {
+      padding-left: 60px;
+      font-size: 13px;
     }
 
     .sidebar a:hover {
       background-color: #575757;
     }
 
-    /* 右边内容区域 */
     .content {
       flex-grow: 1;
       padding: 20px;
@@ -38,17 +46,14 @@
   </style>
 </head>
 <body>
-
   <div class="sidebar">
-    <a href="#">People</a>
-    <a href="#">School</a>
-    <a href="#">Student</a>
+    <a href="people.html">People</a>
+    <a href="school.html" class="sub">↳ School</a>
+    <a href="student.html" class="sub-sub">↳↳ Student</a>
   </div>
-
   <div class="content">
-    <h1>欢迎来到wo的网站</h1>
-    <p>这是主页内容，你可以点击左侧的分类进行浏览。</p>
+    <h1>欢迎来到首页</h1>
+    <p>请从左侧导航选择页面。</p>
   </div>
-
 </body>
 </html>
